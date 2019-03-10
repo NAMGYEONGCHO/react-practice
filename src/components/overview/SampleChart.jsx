@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Highcharts from 'highcharts/highstock';
 import {
   HighchartsStockChart, Chart, withHighcharts, XAxis, YAxis, Title, Legend,
-  AreaSplineSeries, SplineSeries, Navigator, RangeSelector, Tooltip
+  AreaSplineSeries, LineSeries, SplineSeries, Navigator, RangeSelector, Tooltip
 } from 'react-jsx-highstock';
 // import data from 'data.json';
 import Moment from 'react-moment';
@@ -13,25 +13,15 @@ class SampleChart extends Component {
   constructor(props) {
     super(props);
 
-    const now = Date.now();
-   console.log(new Date('2019-02-23').getTime());
-   
-
-  
-   
     this.state = {
-      //data1: [['2019-01-02', 2.3], ['2019-01-03', 3.3], ['2019-01-04', 5.3], ['2019-01-05', 5.3], ['2019-01-06', 5.3], ['2019-01-07', 5.3], ['2019-01-08', 5.3], ['2019-01-09', 5.3], ['2019-10-04', 5.3], ['2019-11-04', 5.3], ['2019-12-04', 5.3]],
-      //data2: [['2019-01-02', 2.3], ['2019-01-03', 3.3], ['2019-01-04', 5.3], ['2019-01-05', 5.3], ['2019-01-06', 5.3], ['2019-01-07', 5.3], ['2019-01-08', 5.3], ['2019-01-09', 5.3], ['2019-10-04', 5.3], ['2019-11-04', 5.3], ['2019-12-04', 5.3]]
       data1: [[1267315200000, 2.3], [1267415200000, 5.3], [1267515200000, 3.3], [1267615200000, 5.3], [1267715200000, 3.3], [1267815200000, 5.3], [1267915200000, 3.3]],
-      data2: [[1267315200000, 3.3], [1267415200000, 7.3], [1267515200000, 8.3]]
-      //data1: [1267315200000, 1267415200000, 1267515200000, 1167515200000],
-      //data2: [1267315200000, 1267415200000, 1267515200000, 1247515200000]
+      data2: [[1267315200000, 3.3], [1267415200000, 4.3], [1267515200000, 7.3], [1267615200000, 9.3], [1267715200000, 3.3], [1267815200000, 6.3], [1267915200000, 8.3]]
     };
   }
 
   render() {
     const { data1, data2 } = this.state;
-
+   
     return (
       <div className="chart container">
 
@@ -41,7 +31,7 @@ class SampleChart extends Component {
           <Title> Historical Price Chart </Title>
 
           <Legend>
-            <Legend.Title>Key</Legend.Title>
+            <Legend.Title>coins</Legend.Title>
           </Legend>
 
           <RangeSelector>
@@ -59,18 +49,18 @@ class SampleChart extends Component {
           </XAxis>
 
           <YAxis>
-            <YAxis.Title>Price</YAxis.Title>
-            <AreaSplineSeries id="profit" name="Profit" data={data1} />
+            <YAxis.Title>Price(EURO)</YAxis.Title>
+            <LineSeries id="mxc" name="mxc" data={data1} />
           </YAxis>
 
           <YAxis opposite>
-            <YAxis.Title>Social Buzz</YAxis.Title>
-            <SplineSeries id="twitter" name="Twitter mentions" data={data2} />
+            <YAxis.Title>Price(USD)</YAxis.Title>
+            <LineSeries id="btc" name="btc" data={data2} />
           </YAxis>
 
           <Navigator>
-            <Navigator.Series seriesId="profit" />
-            <Navigator.Series seriesId="twitter" />
+            <Navigator.Series seriesId="mxc" />
+            <Navigator.Series seriesId="btc" />
           </Navigator>
         </HighchartsStockChart>
       </div>

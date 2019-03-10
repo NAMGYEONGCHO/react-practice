@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import watchListImage from '../../resource/img/watchlist.png';
+//import watchListImage from '../../resource/img/watchlist.png';
 
 class Sidebar extends Component {
     render() {
