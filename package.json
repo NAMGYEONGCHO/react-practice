@@ -9,6 +9,7 @@
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-jsx-highstock": "^3.5.0",
+    "react-jsx-highstock-datepickers": "^3.0.2",
     "react-moment": "^0.8.4",
     "react-scripts": "2.1.8"
   },
