@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 //import watchListImage from '../../resource/img/watchlist.png';
+import port from '../../resource/img/portfolio.png';
 
 class Sidebar extends Component {
     render() {
@@ -14,8 +15,8 @@ class Sidebar extends Component {
                     </div>
                     <div className="card-action">
                         <a href="#" className="watch-list">Watch list</a>
-                        <a href="#">Portfolio</a>
-                        <a href="#">News feed</a>
+                        <a href="#" className="port-folio">Portfolio</a>
+                        <a href="#" className="news-feed">News feed</a>
                     </div>
                 </div>
                 
@@ -26,9 +27,9 @@ class Sidebar extends Component {
                     I am convenient because I require little markup to use effectively.</p>
                     </div>
                     <div className="card-action">
-                        <a href="#">Trade Markets</a>
-                        <a href="#">Copy people</a>
-                        <a href="#">Invest in CopyPortfolio</a>
+                        <a href="#" className="trade-markets">Trade Markets</a>
+                        <a href="#" className="copy-peopled">Copy people</a>
+                        <a href="#" className="invest">Invest in CopyPortfolio</a>
                     </div>
                 </div>
 
@@ -39,9 +40,9 @@ class Sidebar extends Component {
                     I am convenient because I require little markup to use effectively.</p>
                     </div>
                     <div className="card-action">
-                        <a href="#">MXC club</a>
-                        <a href="#">Invite friend</a>
-                        <a href="#">Help</a>
+                        <a href="#" className="club">MXC club</a>
+                        <a href="#" className="invite">Invite friend</a>
+                        <a href="#" className="help">Help</a>
                     </div>
                 </div>
             </div>

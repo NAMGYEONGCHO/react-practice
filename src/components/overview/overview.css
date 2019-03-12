@@ -55,6 +55,10 @@ body {
     margin: 0;
 }
 
+.coin-stats {
+    margin-top: 40px;
+}
+
 @keyframes move {
     0% {
         transform: translateY(0);
@@ -108,7 +112,7 @@ button:hover {
 
 /* Chart */
 .container.chart {
-    margin-top: 20px;
+    margin-top: 80px;
     width: 100%;
 }
 
@@ -116,3 +120,36 @@ a.watch-list {
     background: url(../../resource/img/watchlist.png) no-repeat;
     background-size: contain;
 }
+a.port-folio {
+    background: url(../../resource/img/portfolio.png) no-repeat;
+    background-size: contain;
+}
+a.news-feed {
+    background: url(../../resource/img/news.png) no-repeat;
+    background-size: contain;
+}
+a.trade-markets {
+    background: url(../../resource/img/trademarket.png) no-repeat;
+    background-size: contain;
+}
+a.copy-peopled {
+    background: url(../../resource/img/copypeople.png) no-repeat;
+    background-size: contain;
+}
+a.invest {
+    background: url(../../resource/img/invest.png) no-repeat;
+    background-size: contain;
+}
+a.club {
+    background: url(../../resource/img/club.png) no-repeat;
+    background-size: contain;
+}
+a.invite {
+    background: url(../../resource/img/invitefreind.png) no-repeat;
+    background-size: contain;
+}
+a.help {
+    background: url(../../resource/img/help.png) no-repeat;
+    background-size: contain;
+}
+                        
