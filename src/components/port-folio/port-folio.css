@@ -1,0 +1,13 @@
+.slider {
+    overflow: hidden;
+}
+
+.slider > div {
+    display: inline-block;
+    transition: .5s margin;
+
+    padding: 20px;
+    background: #EEE;
+    margin-right: 20px;
+    border-radius: 5px;
+}

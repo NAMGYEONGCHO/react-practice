@@ -11,8 +11,8 @@ import 'moment-timezone';
 
 class SampleChart extends Component {
 
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     const d = new Date(2018, 0, 1);
     d.setDate(d.getDate() + 1); 
 
@@ -53,7 +53,7 @@ class SampleChart extends Component {
             <RangeSelector.Button count={7} type="day">7d</RangeSelector.Button>
             <RangeSelector.Button count={1} type="month">1m</RangeSelector.Button>
             <RangeSelector.Button type="all">All</RangeSelector.Button>
-            <RangeSelector.Input boxBorderColor="#7cb5ec" DateFormat="%Y-%m-%d" fontWeight="bold" />
+            <RangeSelector.Input boxBorderColor="#7cb5ec" DateFormat="%Y-%m-%d"/>
             {/* <DateRangePickers axisId="xAxis" /> */}
           </RangeSelector>
 

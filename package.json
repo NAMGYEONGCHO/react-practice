@@ -3,7 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "highcharts": "^7.0.3",
+    "bootstrap": "^4.3.1",
+    "core-js": "^3.0.1",
+    "express": "^4.16.4",
+    "highcharts": "^7.1.1",
+    "highcharts-react-official": "^2.1.3",
+    "mdbreact": "^4.12.0",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.23",
     "react": "^16.8.4",
@@ -11,10 +16,15 @@
     "react-jsx-highstock": "^3.5.0",
     "react-jsx-highstock-datepickers": "^3.0.2",
     "react-moment": "^0.8.4",
-    "react-scripts": "2.1.8"
+    "react-prism": "^4.3.2",
+    "react-router-dom": "^4.4.0",
+    "react-scripts": "2.1.8",
+    "reactstrap": "^8.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start-client": "react-scripts start",
+    "start-server": "nodemon --exec npx babel-node --inspect server",
+    "start-server-release": "nodemon --exec npx babel-node server",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -27,5 +37,14 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-decorators": "^7.4.0",
+    "@babel/plugin-proposal-function-bind": "^7.2.0",
+    "@babel/plugin-syntax-export-default-from": "^7.2.0"
+  }
 }

@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-
+import { Link } from 'react-router-dom'
 //import watchListImage from '../../resource/img/watchlist.png';
-import port from '../../resource/img/portfolio.png';
 
 class Sidebar extends Component {
     render() {
@@ -14,9 +13,9 @@ class Sidebar extends Component {
                     I am convenient because I require little markup to use effectively.</p>
                     </div>
                     <div className="card-action">
-                        <a href="#" className="watch-list">Watch list</a>
-                        <a href="#" className="port-folio">Portfolio</a>
-                        <a href="#" className="news-feed">News feed</a>
+                        <Link to='/watch-list' className="watch-list">Watch list</Link>
+                        <Link to='/port-folio' className="port-folio">Portfolio</Link>
+                        <Link to='/news-feed' className="news-feed">News feed</Link>
                     </div>
                 </div>
                 
@@ -27,9 +26,9 @@ class Sidebar extends Component {
                     I am convenient because I require little markup to use effectively.</p>
                     </div>
                     <div className="card-action">
-                        <a href="#" className="trade-markets">Trade Markets</a>
-                        <a href="#" className="copy-peopled">Copy people</a>
-                        <a href="#" className="invest">Invest in CopyPortfolio</a>
+                        <Link to='/trade-markets' className="trade-markets">Trade Markets</Link>
+                        <Link to='/copy-peopled' className="copy-peopled">Copy people</Link>
+                        <Link to='/invest' className="invest">Invest in CopyPortfolio</Link>
                     </div>
                 </div>
 
@@ -40,9 +39,9 @@ class Sidebar extends Component {
                     I am convenient because I require little markup to use effectively.</p>
                     </div>
                     <div className="card-action">
-                        <a href="#" className="club">MXC club</a>
-                        <a href="#" className="invite">Invite friend</a>
-                        <a href="#" className="help">Help</a>
+                        <Link to='/club' className="club">MXC club</Link>
+                        <Link to='/invite' className="invite">Invite friend</Link>
+                        <Link to='/help' className="help">Help</Link>
                     </div>
                 </div>
             </div>

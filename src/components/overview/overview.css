@@ -12,6 +12,8 @@ body {
 
 .overview-container {
     display: flex;
+    flex-direction: column; 
+    width: 100%;
 }
 .card-image {
     padding: 20px;
@@ -111,8 +113,8 @@ button:hover {
 }
 
 /* Chart */
-.container.chart {
-    margin-top: 80px;
+div .chart  {
+    margin-top: 40px;
     width: 100%;
 }
 

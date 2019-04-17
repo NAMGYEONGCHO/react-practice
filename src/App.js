@@ -1,14 +1,22 @@
 import React, { Component } from 'react';
-import Chart from './components/overview/SampleChart.jsx';
-import Head from './components/overview/Head'
-import StatsTable from './components/overview/StatsTable.jsx';
+import Sidebar from './components/layout/Sidebar'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import OverView from './components/overview/OverView'
+import TradeMarkets from './components/tradeMarkets/TradeMarkets'
+import NewsFeed from "./components/news-feed/news-feed";
+//import CopyPeople from './components/copy-people/';
+import WatchList from './components/watch-list/watch-list';
+import PortFolio from './components/port-folio/port-folio';
+
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "bootstrap-css-only/css/bootstrap.min.css";
 import './components/overview/overview.css';
-import Sidebar from './components/overview/Sidebar'
-import coin from './coindata.json';
+import "mdbreact/dist/css/mdb.css";
+
 
 class App extends Component {
 
-  constructor() {
+  /* constructor() {
     super();
 
     this.state = {
@@ -16,19 +24,13 @@ class App extends Component {
     }
 
     setInterval(this.updateCoinData.bind(this), 1000);
-  }
+  } */
 
-  updateCoinData() {
-
-  }
-
-  formatNumber(number) {
-    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
+  
 
   render() {
     
-    const { coin } = this.state;
+    /* const { coin } = this.state;
 
     console.log(coin)
 
@@ -38,24 +40,30 @@ class App extends Component {
     if (typeof value === 'number') {
         coin[attr] = this.formatNumber(value);
     }
-    });
+    }); */
 
     return (
-      <div className="app">
-        <div className="overview-container">
-          <div className="row">
-            {/* Coin data */}
-            <div className="col s12 m3 no-pading-right">
-              <Sidebar />
-            </div>
-            <div className="col s12 m9 no-pading-left">
-              <Head coin={coin}/>
-              <StatsTable coin={coin} />
-              <Chart />
+      <BrowserRouter>
+        <div className="app">
+          <div className="overview-container">
+            <div className="row">
+              {/* Coin data */}
+              <div className="col s12 m3 no-pading-right">
+                <Sidebar />
+              </div>
+              <div className="col s12 m9 no-pading-left">
+                <Switch>
+                  <Route path='/' exact component={ OverView } />
+                  <Route path='/trade-markets' component={ TradeMarkets } />
+                  <Route path='/watch-list' component={ WatchList } />
+                  <Route path='/port-folio' component={ PortFolio } />
+                  <Route path='/news-feed' component={ NewsFeed } />
+                </Switch>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </BrowserRouter>
     );
   }
 }
